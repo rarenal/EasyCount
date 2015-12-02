@@ -1,0 +1,61 @@
+<div id="container_demo" >
+    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+    <a class="hiddenanchor" id="toregister"></a>
+    <a class="hiddenanchor" id="tologin"></a>
+    <div id="wrapper">
+        <div id="login" class="animate form">
+            <form ng-submit="vm.userLogin()" autocomplete="on">
+                <h1>Log in</h1>
+                <p>
+                    <label  for="username" class="uname" data-icon="u" > Tu email </label>
+                    <input ng-model="vm.useremail" id="username" name="username" required="required" type="email" placeholder="mymail@mail.com"/>
+                </p>
+                <p>
+                    <label for="password" class="youpasswd" data-icon="p"> Tu contrase&ntilde;a </label>
+                    <input ng-model="vm.userpass" id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO " />
+                </p>
+                <p class="keeplogin">
+                    <input ng-model="vm.keeplogin" type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" />
+                    <label for="loginkeeping">No cerrar sesi&oacute;n</label>
+                </p>
+                <p class="login button">
+                    <input type="submit" value="Login" />
+                </p>
+                <p class="change_link col-lg-12 col-md-12 col-xs-12">
+                    A&uacute;n no eres miembro ?
+                    <a target="_self" href="#toregister" class="to_register">Reg&iacute;strate</a>
+                </p>
+            </form>
+        </div>
+
+        <div id="register" class="animate form">
+            <form ng-submit="vm.userRegistration()" autocomplete="on">
+                <h1> Registro </h1>
+                <p>
+                    <label for="usernamesignup" class="uname" data-icon="u">Tu nombre de usuario</label>
+                    <input ng-model="vm.username" id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
+                </p>
+                <p>
+                    <label for="emailsignup" class="youmail" data-icon="e" > Tu email</label>
+                    <input ng-model="vm.useremail" id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/>
+                </p>
+                <p>
+                    <label for="passwordsignup" class="youpasswd" data-icon="p">Tu contrase&ntilde;a </label>
+                    <input ng-model="vm.userpass1" id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                </p>
+                <p>
+                    <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Por favor, confirma tu contrase&ntilde;a </label>
+                    <input ng-model="vm.userpass2" id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                </p>
+                <p class="signin button">
+                    <input type="submit" value="Sign up"/>
+                </p>
+                <p class="change_link col-lg-12 col-md-12 col-xs-12">
+                    Ya eres miembro ?
+                    <a target="_self" href="#tologin" class="to_register"> Iniciar sesi&oacute;n </a>
+                </p>
+            </form>
+        </div>
+
+    </div>
+</div>

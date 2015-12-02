@@ -1,0 +1,62 @@
+<nav class="navbar navbar-default" >
+    <div class="container-fluid" height="90px">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./index.html">
+                <img alt="logo EasyCount" src="./images/easycountlogo.png" height="70px">
+            </a>
+            <span class="titulo navbar-brand">EasyCount</span>
+        </div> <!-- navbar-header -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right vertical-center">
+                <li><button type="button" class="btn btn-primary" ng-click="vm.quienesPage()">Quienes somos</button></li>
+                <li><button type="button" class="btn btn-primary" ng-click="vm.contactoPage()">Contacto</button></li>
+                <li><button type="button" class="btn btn-primary btn-lg" ng-click="vm.loginPage()">Iniciar sesión</button></li>
+                <!-- Button trigger modal -->
+                <!--<li><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Iniciar sesión</button></li>
+                <!-- Modal -->
+                <!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Iniciar sesión</h4>
+                            </div>
+                            <div class="modal-body" ng-include="'includes/register-form.html'">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<li class="dropdown">
+                    <button href="#" class="dropdown-toggle btn btn-primary" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Iniciar sesión <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="email">Email address:</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Password:</label>
+                                <input type="password" class="form-control" id="pwd">
+                            </div>
+                            <a>Registrarse</a>
+                            <button id="submitBtn" type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </ul>
+                </li>-->
+            </ul> <!-- ul navbar-right -->
+        </div><!-- /.navbar-collapse -->
+    </div> <!-- container-fluid -->
+</nav>
