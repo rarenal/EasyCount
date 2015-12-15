@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js" ng-app="corporativeApp" ng-controller="corporativeAppCtrl as vm">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Minimal Form Interface</title>
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="styles/demo.css" />
+    <link rel="stylesheet" type="text/css" href="styles/component.css" />
+    <link rel="stylesheet" href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href = "./styles/estilo.css">
+    <script src="js/modernizr.custom.js"></script>
+
+    <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.js"></script>
+    <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-route.js"></script>
+    <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-resource.js"></script>
+    <script src="js/main.js"></script>
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+            integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+    <header>
+        <div ng-include="'/includes/nav.html'"></div>
+    </header>
+    <section>
+        <form id="theForm" class="simform" autocomplete="off">
+            <div class="simform-inner">
+                <ol class="questions">
+                    <li>
+                        <span><label for="q1">Hola! ¿Cómo te llamas?</label></span>
+                        <input id="q1" name="q1" type="text"/>
+                    </li>
+                    <li>
+                        <span><label for="q2">¿Tienes un email donde ponernos en contacto contigo?</label></span>
+                        <input id="q2" name="q2" type="text" pattern="/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/" required/>
+                    </li>
+                    <li>
+                        <span><label for="q3">¿Qué quieres hacernos saber?</label></span>
+                        <input id="q3" name="q3" type="text"/>
+                    </li>
+                    <!--<li>
+                        <span><label for="q4">How do you like your veggies?</label></span>
+                        <input id="q4" name="q4" type="text"/>
+                    </li>
+                    <li>
+                        <span><label for="q5">What book inspires you?</label></span>
+                        <input id="q5" name="q5" type="text"/>
+                    </li>
+                    <li>
+                        <span><label for="q6">What's your profession?</label></span>
+                        <input id="q6" name="q6" type="text"/>
+                    </li>-->
+                </ol><!-- /questions -->
+                <button class="submit" type="submit">Send answers</button>
+                <div class="controls">
+                    <button class="next"><span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span></button>
+                    <div class="progress"></div>
+							<span class="number">
+								<span class="number-current"></span>
+								<span class="number-total"></span>
+							</span>
+                    <span class="error-message"></span>
+                </div><!-- / controls -->
+            </div><!-- /simform-inner -->
+            <span class="final-message"></span>
+        </form><!-- /simform -->
+    </section>
+
+<script src="js/classie.js"></script>
+<script src="js/stepsForm.js"></script>
+<script>
+    var theForm = document.getElementById( 'theForm' );
+
+    new stepsForm( theForm, {
+        onSubmit : function( form ) {
+            // hide form
+            classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
+
+            /*
+             form.submit()
+             or
+             AJAX request (maybe show loading indicator while we don't have an answer..)
+             */
+
+            // let's just simulate something...
+            var messageEl = theForm.querySelector( '.final-message' );
+            messageEl.innerHTML = '¡Gracias! Estaremos en contacto.';
+            classie.addClass( messageEl, 'show' );
+        }
+    } );
+</script>
+</body>
+</html>
